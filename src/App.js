@@ -37,7 +37,6 @@ function App(props) {
         );
       }
     }
-    console.log(results);
     setResults(results);
   };
 
