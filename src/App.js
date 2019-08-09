@@ -1,10 +1,11 @@
 import React from "react";
-import SnackTile from "./Components/SnackTile";
+import SnackList from "./Components/SnackList.js";
+
 
 function App() {
   return (
     <div className="App">
-      <SnackTile />
+      <SnackList />
     </div>
   );
 }

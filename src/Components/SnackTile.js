@@ -6,7 +6,7 @@ class SnackTile extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            sancks: []
+            
          }
     }
 
@@ -22,7 +22,7 @@ class SnackTile extends Component {
                         <img alt="Peanut Butter Sandwich" className="c-tile__poster" src={PBSandwich} />
                       </div>
                       <div className="c-tile__body c-tile__caption">
-                        <p className="c-tile__title c-heading-delta">Peanut Butter Sandwich</p>
+                        <p className="c-tile__title c-heading-delta">{ this.props.snackName }</p>
                       </div>
                     </div>
                     <div className="c-tile__shine c-tile__shine--top c-shine">
@@ -39,10 +39,10 @@ class SnackTile extends Component {
               <div className="c-panel__content">
                 <a className="c-panel__toggle" href="#1">Close</a>
                 <div className="o-container">
-                  <p>A delicious peanut butter sandwich</p>
+                  <p>{ this.props.snackDescription }</p>
                   <ul class="snack-data">
-                    <li>Calories: 0 /100g</li>
-                    <li>Sugar: 0 /100g</li>
+                    <li>Calories: { this.props.calories }g per 100g</li>
+                    <li>Sugar: { this.props.sugar }g per 100g</li>
                   </ul>
                 </div>
               </div>
@@ -51,5 +51,4 @@ class SnackTile extends Component {
           );
     }
 }
-
 export default SnackTile;
