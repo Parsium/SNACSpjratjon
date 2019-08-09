@@ -4,78 +4,151 @@
       "id": 0,
       "name": "Maltesers",
       "image": "assets/maltesters.jpg",
-      "sugar": 52,
-      "cal": 503,
-      "vegetarian": true,
-      "vegan": false,
-      "glutenFree": false,
-      "nutFree": true
+      "nutrition": {
+        "sugar": 52,
+        "cal": 503
+      },
+      "dietary": {
+        "vegetarian": true,
+        "vegan": false,
+        "glutenFree": false,
+        "nutFree": true
+      }
     },
     {
       "id": 1,
       "name": "Digestive Biscuits",
       "image": "assets/digestives.jpg",
-      "sugar": 16.6,
-      "cal": 481,
-      "vegetarian": true,
-      "vegan": true,
-      "glutenFree": false,
-      "nutFree": true
+      "nutrition": {
+        "sugar": 16.6,
+        "cal": 481
+      },
+      "dietary": {
+        "vegetarian": true,
+        "vegan": true,
+        "glutenFree": false,
+        "nutFree": true
+      }
     },
     {
       "id": 2,
       "name": "Special K Biscuit Moments",
       "image": "assets/specialK.jpg",
-      "sugar": 27,
-      "cal": 383,
-      "vegetarian": true,
-      "vegan": false,
-      "glutenFree": false,
-      "nutFree": true
+      "nutrition": {
+        "sugar": 27,
+        "cal": 383
+      },
+      "dietary": {
+        "vegetarian": true,
+        "vegan": false,
+        "glutenFree": false,
+        "nutFree": true
+      }
     },
     {
       "id": 3,
       "name": "Brazil Nuts",
       "image": "assets/brazil.jpg",
-      "sugar": 2.3,
-      "cal": 687.4,
-      "vegetarian": true,
-      "vegan": true,
-      "glutenFree": true,
-      "nutFree": false
+      "nutrition": {
+        "sugar": 2.3,
+        "cal": 687.4
+      },
+      "dietary": {
+        "vegetarian": true,
+        "vegan": true,
+        "glutenFree": true,
+        "nutFree": false
+      }
     },
     {
       "id": 4,
       "name": "Blueberry Muffin",
       "image": "assets/muffin.png",
-      "sugar": 29,
-      "cal": 277,
-      "vegetarian": true,
-      "vegan": false,
-      "glutenFree": false,
-      "nutFree": false
+      "nutrition": {
+        "sugar": 29,
+        "cal": 277
+      },
+      "dietary": {
+        "vegetarian": true,
+        "vegan": false,
+        "glutenFree": false,
+        "nutFree": false
+      }
     },
     {
       "id": 5,
       "name": "Peanut Butter Sandwich",
       "image": "assets/PBSandwich.jpeg",
-      "sugar": 6.9,
-      "cal": 368,
-      "vegetarian": true,
-      "vegan": true,
-      "glutenFree": false,
-      "nutFree": false
+      "nutrition": {
+        "sugar": 6.9,
+        "cal": 368
+      },
+      "dietary": {
+        "vegetarian": true,
+        "vegan": true,
+        "glutenFree": false,
+        "nutFree": false
+      }
     },
     {
       "id": 6,
       "name": "Banana",
       "image": "assets/banana.jpg",
-      "sugar": 27.5,
-      "cal": 105,
-      "vegetarian": true,
-      "vegan": true,
-      "glutenFree": true,
-      "nutFree": true
+      "nutrition": {
+        "sugar": 27.5,
+        "cal": 105
+      },
+      "dietary": {
+        "vegetarian": true,
+        "vegan": true,
+        "glutenFree": true,
+        "nutFree": true
+      }
+    },
+    {
+      "id": 7,
+      "name": "Sausage Roll",
+      "image": "assets/banana.jpg",
+      "nutrition": {
+        "sugar": 27.5,
+        "cal": 105
+      },
+      "dietary": {
+        "vegetarian": false,
+        "vegan": false,
+        "glutenFree": false,
+        "nutFree": true
+      }
+    },
+    {
+      "id": 8,
+      "name": "Cheese",
+      "image": "assets/cheese.jpg",
+      "nutrition": {
+        "sugar": 27.5,
+        "cal": 105
+      },
+      "dietary": {
+        "vegetarian": true,
+        "vegan": false,
+        "glutenFree": true,
+        "nutFree": true
+      }
+    },
+    {
+      "id": 9,
+      "name": "Beef Jerky",
+      "image": "assets/beefJerky.jpg",
+      "nutrition": {
+        "sugar": 27.5,
+        "cal": 105
+      },
+      "dietary": {
+        "vegetarian": false,
+        "vegan": false,
+        "glutenFree": true,
+        "nutFree": true
+      }
     }
   ]
 }

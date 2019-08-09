@@ -2,7 +2,7 @@ import React from "react";
 import { Slider } from "./Slider";
 import { Checkbox } from "./Checkbox";
 
-function Control() {
+function Control(props) {
   return (
     <div className="o-container">
       <form>
@@ -13,10 +13,34 @@ function Control() {
         </div>
         <br />
         <div>
-          <Checkbox id="vegetarian" display="Vegetarian" />
-          <Checkbox id="vegan" display="Vegan" />
-          <Checkbox id="gluten-free" display="Gluten Free" />
-          <Checkbox id="nut-free" display="Nut Free" />
+          <Checkbox
+            id={0}
+            name="vegetarian"
+            display="Vegetarian"
+            value={props.vegetarian}
+            onChange={props.onChange}
+          />
+          <Checkbox
+            id={1}
+            name="vegan"
+            value={props.vegan}
+            display="Vegan"
+            onChange={props.onChange}
+          />
+          <Checkbox
+            id={2}
+            name="gluten-free"
+            value={props.glutenFree}
+            display="Gluten Free"
+            onChange={props.onChange}
+          />
+          <Checkbox
+            id={3}
+            name="nut-free"
+            value={props.nutFree}
+            display="Nut Free"
+            onChange={props.onChange}
+          />
         </div>
       </form>
     </div>
