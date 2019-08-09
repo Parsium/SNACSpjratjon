@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./form.css";
 
-function Slider(props) {
+export const Slider = props => {
   const [value, setValue] = useState(5);
 
   const handleChange = event => {
@@ -18,7 +18,7 @@ function Slider(props) {
         min="1"
         max="10"
         value={value}
-        id="slider"
+        id={props.id}
         onChange={handleChange}
       />
       <label className="rightLabel" htmlFor="slider">
@@ -26,6 +26,6 @@ function Slider(props) {
       </label>
     </div>
   );
-}
+};
 
-export default Slider;
+// export default Slider;

@@ -1,52 +1,22 @@
 import React from "react";
-import Slider from "./Slider";
+import { Slider } from "./Slider";
+import { Checkbox } from "./Checkbox";
 
 function Control() {
   return (
     <div className="o-container">
       <form>
         <div className="o-container">
-          <Slider leftLabel="Sweet" rightLabel="Savoury" />
+          <Slider id="sweetness" leftLabel="Sweet" rightLabel="Savoury" />
           <br />
-          <Slider leftLabel="Healthy" rightLabel="Junk" />
+          <Slider id="healthiness" leftLabel="Healthy" rightLabel="Junk" />
         </div>
         <br />
         <div>
-          <div className="o-layout__item u-width-1/4 checkbox">
-            <label htmlFor="vegetarian">Vegetarian </label>
-            <br />
-            <input
-              type="checkbox"
-              name="vegetarian"
-              id="vegetarian"
-              value="vegetarian"
-            />
-          </div>
-          <div className="o-layout__item u-width-1/4 checkbox">
-            <label htmlFor="vegan">Vegan </label>
-            <br />
-            <input type="checkbox" name="vegan" id="vegan" value="vegan" />
-          </div>
-          <div className="o-layout__item u-width-1/4 checkbox">
-            <label htmlFor="nutFree">Nut Free </label>
-            <br />
-            <input
-              type="checkbox"
-              name="nutFree"
-              id="nutFree"
-              value="nutFree"
-            />
-          </div>
-          <div className="o-layout__item u-width-1/4 checkbox">
-            <label htmlFor="glutenFree">Gluten Free </label>
-            <br />
-            <input
-              type="checkbox"
-              name="glutenFree"
-              id="glutenFree"
-              value="glutenFree"
-            />
-          </div>
+          <Checkbox id="vegetarian" display="Vegetarian" />
+          <Checkbox id="vegan" display="Vegan" />
+          <Checkbox id="gluten-free" display="Gluten Free" />
+          <Checkbox id="nut-free" display="Nut Free" />
         </div>
       </form>
     </div>
