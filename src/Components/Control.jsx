@@ -7,9 +7,9 @@ function Control(props) {
     <div className="o-container">
       <form>
         <div className="o-container">
-          <Slider id="sweetness" leftLabel="Sweet" rightLabel="Savoury" />
+          <Slider id={0} name="sweetness" leftLabel="Sweet" rightLabel="Savoury" onChange={props.onChange}/>
           <br />
-          <Slider id="healthiness" leftLabel="Healthy" rightLabel="Junk" />
+          <Slider id={1} name="healthiness" leftLabel="Healthy" rightLabel="Junk" onChange={props.onChange}/>
         </div>
         <br />
         <div>

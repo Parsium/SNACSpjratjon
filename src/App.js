@@ -6,17 +6,21 @@ import Control from "./Components/Control";
 function App(props) {
   let [checkboxes, setCheckboxes] = useState(Array(4).fill(false)); // checkboxes is an array where the elements are the state values for each checkbox
   let [results, setResults] = useState(props.data.snacks);
+  const [sliders, setSliders] = useState(Array(2).fill(5));
 
   const handleCheck = (event, id) => {
+    if (event.type == "checkbox") {
     let newCheckboxes = checkboxes;
     newCheckboxes[id] = !checkboxes[id];
     setCheckboxes(newCheckboxes);
-
     filterSnacks();
+    }
   };
 
+
   // Returns set of snacks based on controls
-  const filterSnacks = () => {
+  const filterSnacks = (event) => {
+
     let snacks = props.data.snacks;
     let results = snacks;
     const dietary = Object.keys(snacks[0].dietary);
@@ -28,8 +32,24 @@ function App(props) {
         );
       }
     }
-    console.log(results);
     setResults(results);
+  
+  };
+
+  // const sortSnacksBySweetness = () => {
+  //   if (sliders[0] >= 5) {
+  //     results.sort((a, b) => parseFloat(a.nutrition.calories) - parseFloat(b.nutrition.calories));
+  //   }
+  // }
+
+  const handleSlide = (event, id) => {
+    console.log(event)
+    if (event.type == "range") {
+      let newSliders = sliders;
+      newSliders[id] = parseInt(event.target.value)
+      setCheckboxes(newSliders);
+      console.log(sliders)
+    }
   };
 
   return (
@@ -39,7 +59,10 @@ function App(props) {
         vegan={checkboxes[1]}
         glutenFree={checkboxes[2]}
         nutFree={checkboxes[3]}
-        onChange={(e, id) => handleCheck(e, id)}
+        onChange={(e, id) => {
+          handleCheck(e, id)
+          handleSlide(e, id)
+        }}
       />
       <SnackList snacks={results} />
       <Footer />

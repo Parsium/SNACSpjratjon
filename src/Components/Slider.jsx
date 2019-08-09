@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import "./form.css";
 
 export const Slider = props => {
-  const [value, setValue] = useState(5);
+  // const [value, setValue] = useState(5);
 
-  const handleChange = event => {
-    setValue(event.target.value);
-  };
+  // const handleChange = event => {
+  //   setValue(event.target.value);
+  // };
   return (
     <div className="slidecontainer " id="sliderContainer">
       <label htmlFor="slider" className="leftLabel">
@@ -17,9 +17,11 @@ export const Slider = props => {
         type="range"
         min="1"
         max="10"
-        value={value}
+        value={props.value}
         id={props.id}
-        onChange={handleChange}
+        onChange={e => {
+          props.onChange(e, props.id);
+        }}
       />
       <label className="rightLabel" htmlFor="slider">
         {props.rightLabel}
