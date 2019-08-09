@@ -32,15 +32,17 @@ function App(props) {
   };
 
   return (
-    <Control
-      vegetarian={checkboxes[0]}
-      vegan={checkboxes[1]}
-      glutenFree={checkboxes[2]}
-      nutFree={checkboxes[3]}
-      onChange={(e, id) => handleCheck(e, id)}
-    />
-    <SnackList />
-    <Footer />
+    <div>
+      <Control
+        vegetarian={checkboxes[0]}
+        vegan={checkboxes[1]}
+        glutenFree={checkboxes[2]}
+        nutFree={checkboxes[3]}
+        onChange={(e, id) => handleCheck(e, id)}
+      />
+      <SnackList />
+      <Footer />
+    </div>
   );
 }
 
