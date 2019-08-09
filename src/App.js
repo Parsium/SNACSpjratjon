@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import SnackList from "./Components/SnackList";
+import { Header } from "./Components/Header";
 import Footer from "./Components/Footer";
 import Control from "./Components/Control";
 
@@ -32,15 +33,18 @@ function App(props) {
   };
 
   return (
-    <Control
-      vegetarian={checkboxes[0]}
-      vegan={checkboxes[1]}
-      glutenFree={checkboxes[2]}
-      nutFree={checkboxes[3]}
-      onChange={(e, id) => handleCheck(e, id)}
-    />
-    <SnackList />
-    <Footer />
+    <div>
+      <Header />
+      <Control
+        vegetarian={checkboxes[0]}
+        vegan={checkboxes[1]}
+        glutenFree={checkboxes[2]}
+        nutFree={checkboxes[3]}
+        onChange={(e, id) => handleCheck(e, id)}
+      />
+      <SnackList />
+      <Footer />
+    </div>
   );
 }
 
