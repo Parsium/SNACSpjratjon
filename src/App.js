@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import SnackList from "./Components/SnackList";
+import { Header } from "./Components/Header";
 import Footer from "./Components/Footer";
 import Control from "./Components/Control";
 import FeelingLucky from "./Components/FeelingLucky";
@@ -17,9 +18,9 @@ function App(props) {
   };
 
   // Get entire list of snacks and update state to display a random one.
-  const randomiseSnack = (event) => {
+  const randomiseSnack = event => {
     let snacks = props.data.snacks;
-    const randomSnack = snacks[Math.floor(Math.random()*snacks.length)];
+    const randomSnack = snacks[Math.floor(Math.random() * snacks.length)];
 
     setResults([randomSnack]);
   };
@@ -42,6 +43,7 @@ function App(props) {
 
   return (
     <div>
+      <Header />
       <Control
         vegetarian={checkboxes[0]}
         vegan={checkboxes[1]}
@@ -49,7 +51,7 @@ function App(props) {
         nutFree={checkboxes[3]}
         onChange={(e, id) => handleCheck(e, id)}
       />
-      <FeelingLucky onClick={() => randomiseSnack()}/>
+      <FeelingLucky onClick={() => randomiseSnack()} />
       <SnackList snacks={results} />
       <Footer />
     </div>
