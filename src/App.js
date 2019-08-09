@@ -1,6 +1,5 @@
 import React from "react";
-import SnackList from "./Components/SnackList.js";
-
+import SnackList from './Components/SnackList';
 
 function App() {
   return (
