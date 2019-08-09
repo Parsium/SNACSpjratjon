@@ -5,6 +5,7 @@ import Control from "./Components/Control";
 
 function App(props) {
   let [checkboxes, setCheckboxes] = useState(Array(4).fill(false)); // checkboxes is an array where the elements are the state values for each checkbox
+  let [results, setResults] = useState(props.data.snacks);
 
   const handleCheck = (event, id) => {
     let newCheckboxes = checkboxes;
@@ -28,7 +29,7 @@ function App(props) {
       }
     }
     console.log(results);
-    return results;
+    setResults(results);
   };
 
   return (
@@ -40,7 +41,7 @@ function App(props) {
         nutFree={checkboxes[3]}
         onChange={(e, id) => handleCheck(e, id)}
       />
-      <SnackList />
+      <SnackList snacks={results} />
       <Footer />
     </div>
   );
