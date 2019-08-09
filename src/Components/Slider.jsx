@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./form.css";
 
 function Slider(props) {
   const [value, setValue] = useState(5);
@@ -7,9 +8,12 @@ function Slider(props) {
     setValue(event.target.value);
   };
   return (
-    <div id="sliderContainer">
-      <label htmlFor="slider">{props.leftLabel}</label>
+    <div className="slidecontainer " id="sliderContainer">
+      <label htmlFor="slider" className="leftLabel">
+        {props.leftLabel}
+      </label>
       <input
+        className="slider"
         type="range"
         min="1"
         max="10"
@@ -17,7 +21,9 @@ function Slider(props) {
         id="slider"
         onChange={handleChange}
       />
-      <label htmlFor="slider">{props.rightLabel}</label>
+      <label className="rightLabel" htmlFor="slider">
+        {props.rightLabel}
+      </label>
     </div>
   );
 }

@@ -1,9 +1,8 @@
 import React from "react";
-import Slider from "./Components/Slider";
-import Control from "./Components/Slider";
+import Control from "./Components/Control";
 
 function App() {
-  return;
+  return <Control />;
 }
 
 export default App;

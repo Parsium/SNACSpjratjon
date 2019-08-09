@@ -1,0 +1,37 @@
+.slidecontainer {
+  width: 100%;
+  vertical-align: middle;
+}
+.slider {
+  -webkit-appearance: none;
+  width: 70%;
+  height: 6px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+}
+
+.slider::-webkit-slider-thumb {
+  z-index: 5;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 23px;
+  height: 24px;
+  border: 0;
+  background-image: url("../assets/biscuit.png");
+  cursor: pointer;
+}
+
+.rightLabel {
+  width: 15%;
+  float: right;
+  text-align: right;
+}
+.leftLabel {
+  width: 15%;
+  float: left;
+}
+
+.checkbox {
+  text-align: center;
+}
