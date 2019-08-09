@@ -46,5 +46,7 @@ table {
     width: 100vw;
     background-color: black;
     color: white;
-    padding: 1rem;
+	margin: 200px 0px 0px;
+	padding: 2rem;
+    bottom: 0;
 }
