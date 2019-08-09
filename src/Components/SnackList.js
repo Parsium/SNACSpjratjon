@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import SnackTile from "./SnackTile.js"
+import "../Styles/SnackList.css";
 
 class SnackList extends Component {
     constructor(props) {

@@ -1,10 +1,10 @@
 .snack-list {
-    display: flex;
-    width: 100vw;
-    flex-direction: column;
-    flex-wrap: wrap;
+    width: 100%;
 }
 
 .snack-list h2 {
     font-size: large;
+}
+.o-layout__item {
+    width: 100%;
 }

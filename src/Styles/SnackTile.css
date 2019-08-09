@@ -1,12 +1,10 @@
 
 /* The snack tile is a flex element - so the SnackList element needs to be a flex-container. */
-.o-layout {
+.snack-tile {
     justify-content: center;
     text-align: center;
     padding: 2rem 2rem 0 2rem;
-    width: 35vw;
 }
-
 
 .c-text-body {
     text-align: center;
@@ -20,3 +18,4 @@
 .snack-data {
     list-style: none;
 }
+

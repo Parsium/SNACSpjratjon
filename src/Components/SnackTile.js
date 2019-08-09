@@ -8,7 +8,7 @@ function SnackTile(props) {
     const [cPanelIsOpen, closePanel] = useState(false);
 
         return (
-            <div>
+            <div className="snack-tile">
               <div className="o-layout o-layout--center">
                 <div className="o-layout__item u-width-1/2@large">
                   <article className={classnames({'c-tile': true, 'c-tile--square': true, 'is-selected': cPanelIsOpen})}>
