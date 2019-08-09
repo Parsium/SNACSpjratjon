@@ -40,7 +40,7 @@ class SnackTile extends Component {
                 <a className="c-panel__toggle" href="#1">Close</a>
                 <div className="o-container">
                   <p>{ this.props.snackDescription }</p>
-                  <ul class="snack-data">
+                  <ul className="snack-data">
                     <li>Calories: { this.props.calories }g per 100g</li>
                     <li>Sugar: { this.props.sugar }g per 100g</li>
                   </ul>

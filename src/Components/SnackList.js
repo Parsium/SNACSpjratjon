@@ -7,12 +7,14 @@ class SnackList extends Component {
         this.state = {
             snacks: [
                 {
+                    id: 0,
                     name: "PBSandwich",
                     description: "A pbsandwich",
                     calories: "102",
                     sugar: 22
                 },
                 {
+                    id: 1,
                     name: "Digestive",
                     description: "A lovely digestive biscuit",
                     calories: "50",
@@ -25,16 +27,20 @@ class SnackList extends Component {
     render() {
         return (
             <div className="snack-list">
-                {
-                    this.state.snacks.map((snack) => 
-                        <SnackTile 
-                            snackName={snack.name}
-                            snackDescription={snack.description}
-                            calories={snack.calories}
-                            sugar={snack.sugar}
-                            />
-                    ) 
-                }
+                <h2>Your recommended snacks!</h2>
+                <div className="snack-list-container">
+                    {
+                        this.state.snacks.map((snack) => 
+                            <SnackTile 
+                                key={snack.id}
+                                snackName={snack.name}
+                                snackDescription={snack.description}
+                                calories={snack.calories}
+                                sugar={snack.sugar}
+                                />
+                        ) 
+                    }
+                </div>
             </div>
         );
     }
