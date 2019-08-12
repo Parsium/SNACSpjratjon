@@ -1,6 +1,7 @@
 import React from "react";
 import { Slider } from "./Slider";
 import { Checkbox } from "./Checkbox";
+import '../Styles/Control.css';
 
 function Control(props) {
   return (

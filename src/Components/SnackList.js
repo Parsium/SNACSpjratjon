@@ -28,7 +28,7 @@ class SnackList extends Component {
   render() {
     return (
       <div className="snack-list">
-        <h2>Your recommended snacks!</h2>
+        <h1 id="snackList-header" className= "c-heading-alpha">Your recommended snacks!</h1>
         <div className="snack-list-container">
           {this.props.snacks.map(snack => (
             <SnackTile
