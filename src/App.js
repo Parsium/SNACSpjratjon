@@ -9,11 +9,12 @@ function App(props) {
   const [sliders, setSliders] = useState(Array(2).fill(5));
 
   const handleCheck = (event, id) => {
-    if (event.type == "checkbox") {
-    let newCheckboxes = checkboxes;
-    newCheckboxes[id] = !checkboxes[id];
-    setCheckboxes(newCheckboxes);
-    filterSnacks();
+    if (id.slice(0, 7) === "checkbox") {
+      console.log(id)
+      let newCheckboxes = checkboxes;
+      newCheckboxes[id] = !checkboxes[id];
+      setCheckboxes(newCheckboxes);
+      filterSnacks();
     }
   };
 
@@ -21,9 +22,9 @@ function App(props) {
   // Returns set of snacks based on controls
   const filterSnacks = (event) => {
 
-    let snacks = props.data.snacks;
-    let results = snacks;
-    const dietary = Object.keys(snacks[0].dietary);
+    // let snacks = props.data.snacks;
+    // let results = snacks;
+    const dietary = Object.keys(results[0].dietary);
 
     for (let i = 0; i < checkboxes.length; i++) {
       if (checkboxes[i]) {
@@ -36,19 +37,26 @@ function App(props) {
   
   };
 
-  // const sortSnacksBySweetness = () => {
-  //   if (sliders[0] >= 5) {
-  //     results.sort((a, b) => parseFloat(a.nutrition.calories) - parseFloat(b.nutrition.calories));
-  //   }
-  // }
+  const sortSnacksBySweetness = () => {
+
+    results.sort(function(a, b){
+      return a.nutrition.sugar - b.nutrition.sugar;
+     });
+    if (sliders[0] < 5) {
+      results.reverse();
+      console.log("A" + results[0].nutrition.sugar)
+    }
+    setResults(results);
+  }
 
   const handleSlide = (event, id) => {
-    console.log(event)
-    if (event.type == "range") {
+    if (id.slice(0, 6) === "slider") {
+      let sliderId = id.slice(7, 8);
       let newSliders = sliders;
-      newSliders[id] = parseInt(event.target.value)
-      setCheckboxes(newSliders);
-      console.log(sliders)
+      newSliders[sliderId] = parseInt(event.target.value);
+      setSliders(newSliders);
+      console.log("B" +sliders);
+      sortSnacksBySweetness();
     }
   };
 
