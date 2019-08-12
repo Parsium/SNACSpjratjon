@@ -9,13 +9,10 @@ function App(props) {
   const [sliders, setSliders] = useState(Array(2).fill(5));
 
   const handleCheck = (event, id) => {
-    if (id.slice(0, 7) === "checkbox") {
-      console.log(id)
-      let newCheckboxes = checkboxes;
-      newCheckboxes[id] = !checkboxes[id];
-      setCheckboxes(newCheckboxes);
-      filterSnacks();
-    }
+    let newCheckboxes = checkboxes;
+    newCheckboxes[id] = !checkboxes[id];
+    setCheckboxes(newCheckboxes);
+    filterSnacks();
   };
 
 
@@ -50,15 +47,21 @@ function App(props) {
   }
 
   const handleSlide = (event, id) => {
-    if (id.slice(0, 6) === "slider") {
-      let sliderId = id.slice(7, 8);
-      let newSliders = sliders;
-      newSliders[sliderId] = parseInt(event.target.value);
-      setSliders(newSliders);
-      console.log("B" +sliders);
-      sortSnacksBySweetness();
-    }
+    let newSliders = sliders;
+    newSliders[id] = parseInt(event.target.value);
+    setSliders(newSliders);
+    console.log("B" +sliders);
+    sortSnacksBySweetness();
   };
+
+  const handleChange = (type) => (e, id) => {
+    console.log('handleChange', type)
+    if (type === 'slider') {
+      handleSlide(e, id)
+    } else {
+      handleCheck(e, id)
+    }
+  }
 
   return (
     <div>
@@ -67,10 +70,7 @@ function App(props) {
         vegan={checkboxes[1]}
         glutenFree={checkboxes[2]}
         nutFree={checkboxes[3]}
-        onChange={(e, id) => {
-          handleCheck(e, id)
-          handleSlide(e, id)
-        }}
+        onChange={handleChange}
       />
       <SnackList snacks={results} />
       <Footer />
