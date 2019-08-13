@@ -1,6 +1,10 @@
 import React, { useState } from "react";
+<<<<<<< HEAD
 import {SnackList} from "./Components/SnackList";
+=======
+>>>>>>> origin/master
 import { Header } from "./Components/Header";
+import { SnackList } from "./Components/SnackList";
 import Footer from "./Components/Footer";
 import Control from "./Components/Control";
 import FeelingLucky from "./Components/FeelingLucky";
@@ -8,12 +12,12 @@ import FeelingLucky from "./Components/FeelingLucky";
 function App(props) {
   let [checkboxes, setCheckboxes] = useState(Array(4).fill(false)); // checkboxes is an array where the elements are the state values for each checkbox
   let [results, setResults] = useState(props.data.snacks);
+  const [sliders, setSliders] = useState(Array(2).fill(5));
 
   const handleCheck = (event, id) => {
     let newCheckboxes = checkboxes;
     newCheckboxes[id] = !checkboxes[id];
     setCheckboxes(newCheckboxes);
-
     filterSnacks();
   };
 
@@ -26,19 +30,69 @@ function App(props) {
   };
 
   // Based from selected controls, update state to display relevant snacks.
-  const filterSnacks = () => {
-    let snacks = props.data.snacks;
-    let results = snacks;
-    const dietary = Object.keys(snacks[0].dietary);
-
-    for (let i = 0; i < checkboxes.length; i++) {
-      if (checkboxes[i]) {
-        results = results.filter(
-          item => item.dietary[dietary[i]] === checkboxes[i]
+  const filterSnacks = event => {
+    var newResults = props.data.snacks;
+    const dietary = Object.keys(results[0].dietary);
+    checkboxes.map((checkboxValue, index) => {
+      if (checkboxValue) {
+        newResults = newResults.filter(
+          item => item.dietary[dietary[index]] === checkboxes[index]
         );
       }
+    });
+    if (prioritiseSweetness()) {
+      sortSnacksBySweetness(newResults);
+    } else {
+      sortSnacksByFatness(newResults);
     }
-    setResults(results);
+  };
+
+  const prioritiseSweetness = () => {
+    let sweetnessDifference = Math.abs(5 - sliders[0]);
+    let fatnessDifference = Math.abs(5 - sliders[1]);
+    if (sweetnessDifference >= fatnessDifference) {
+      return true;
+    }
+  };
+
+  const sortSnacksBySweetness = newResults => {
+    newResults.sort((a, b) => {
+      return a.nutrition.sugar - b.nutrition.sugar;
+    });
+    if (sliders[0] < 5) {
+      newResults.reverse();
+    }
+    setResults(newResults);
+  };
+
+  const sortSnacksByFatness = newResults => {
+    newResults.sort((a, b) => {
+      return a.nutrition.cal - b.nutrition.cal;
+    });
+    if (sliders[1] > 5) {
+      newResults.reverse();
+    }
+    setResults(newResults);
+  };
+
+  const handleSlide = (event, id) => {
+    let newSliders = sliders;
+    newSliders[id] = parseInt(event.target.value);
+    setSliders(newSliders);
+    let newResults = results.slice(0);
+    if (id === 0) {
+      sortSnacksBySweetness(newResults);
+    } else if (id === 1) {
+      sortSnacksByFatness(newResults);
+    }
+  };
+
+  const handleChange = type => (e, id) => {
+    if (type === "slider") {
+      handleSlide(e, id);
+    } else {
+      handleCheck(e, id);
+    }
   };
 
   return (
@@ -49,7 +103,7 @@ function App(props) {
         vegan={checkboxes[1]}
         glutenFree={checkboxes[2]}
         nutFree={checkboxes[3]}
-        onChange={(e, id) => handleCheck(e, id)}
+        onChange={handleChange}
       />
       <FeelingLucky onClick={() => randomiseSnack()} />
       <SnackList key={results[0].name} snacks={results} />

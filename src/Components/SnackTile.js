@@ -5,6 +5,7 @@ import classnames from "classnames";
 function SnackTile(props) {
   const [cPanelIsOpen, closePanel] = useState(false);
 
+
   return (
     <div className="snack-tile">
       <div className="o-layout o-layout--center">

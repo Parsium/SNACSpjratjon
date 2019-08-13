@@ -3,14 +3,14 @@ import { Slider } from "./Slider";
 import { Checkbox } from "./Checkbox";
 import '../Styles/Control.css';
 
-function Control(props) {
+function Control({onChange, vegetarian, vegan, glutenFree, nutFree}) {
   return (
     <div className="o-container">
       <form>
         <div className="o-container">
-          <Slider id="sweetness" leftLabel="Sweet" rightLabel="Savoury" />
+          <Slider id={0} name="sweetness" leftLabel="Sweet" rightLabel="Savoury" onChange={onChange('slider')}/>
           <br />
-          <Slider id="healthiness" leftLabel="Healthy" rightLabel="Junk" />
+          <Slider id={1} name="healthiness" leftLabel="Healthy" rightLabel="Junk" onChange={onChange('slider')}/>
         </div>
         <br />
         <div>
@@ -18,29 +18,29 @@ function Control(props) {
             id={0}
             name="vegetarian"
             display="Vegetarian"
-            value={props.vegetarian}
-            onChange={props.onChange}
+            value={vegetarian}
+            onChange={onChange('checkbox')}
           />
           <Checkbox
             id={1}
             name="vegan"
-            value={props.vegan}
+            value={vegan}
             display="Vegan"
-            onChange={props.onChange}
+            onChange={onChange('checkbox')}
           />
           <Checkbox
             id={2}
             name="gluten-free"
-            value={props.glutenFree}
+            value={glutenFree}
             display="Gluten Free"
-            onChange={props.onChange}
+            onChange={onChange('checkbox')}
           />
           <Checkbox
             id={3}
             name="nut-free"
-            value={props.nutFree}
+            value={nutFree}
             display="Nut Free"
-            onChange={props.onChange}
+            onChange={onChange('checkbox')}
           />
         </div>
       </form>

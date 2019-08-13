@@ -3,7 +3,7 @@
     {
       "id": 0,
       "name": "Maltesers",
-      "image": "assets/maltesters.jpg",
+      "image": "maltesers.jpg",
       "nutrition": {
         "sugar": 52,
         "cal": 503
@@ -18,14 +18,14 @@
     {
       "id": 1,
       "name": "Digestive Biscuits",
-      "image": "assets/digestives.jpg",
+      "image": "digestives.jpg",
       "nutrition": {
         "sugar": 16.6,
         "cal": 481
       },
       "dietary": {
         "vegetarian": true,
-        "vegan": true,
+        "vegan": false,
         "glutenFree": false,
         "nutFree": true
       }
@@ -33,7 +33,7 @@
     {
       "id": 2,
       "name": "Special K Biscuit Moments",
-      "image": "assets/specialK.jpg",
+      "image": "specialK.jpg",
       "nutrition": {
         "sugar": 27,
         "cal": 383
@@ -48,7 +48,7 @@
     {
       "id": 3,
       "name": "Brazil Nuts",
-      "image": "assets/brazil.jpg",
+      "image": "brazil.jpg",
       "nutrition": {
         "sugar": 2.3,
         "cal": 687.4
@@ -63,7 +63,7 @@
     {
       "id": 4,
       "name": "Blueberry Muffin",
-      "image": "assets/muffin.png",
+      "image": "muffin.png",
       "nutrition": {
         "sugar": 29,
         "cal": 277
@@ -78,7 +78,7 @@
     {
       "id": 5,
       "name": "Peanut Butter Sandwich",
-      "image": "assets/PBSandwich.jpeg",
+      "image": "PBSandwich.jpeg",
       "nutrition": {
         "sugar": 6.9,
         "cal": 368
@@ -93,7 +93,7 @@
     {
       "id": 6,
       "name": "Banana",
-      "image": "assets/banana.jpg",
+      "image": "banana.jpeg",
       "nutrition": {
         "sugar": 27.5,
         "cal": 105
@@ -108,10 +108,10 @@
     {
       "id": 7,
       "name": "Sausage Roll",
-      "image": "assets/banana.jpg",
+      "image": "sausage.jpg",
       "nutrition": {
-        "sugar": 27.5,
-        "cal": 105
+        "sugar": 0.18,
+        "cal": 351
       },
       "dietary": {
         "vegetarian": false,
@@ -123,10 +123,10 @@
     {
       "id": 8,
       "name": "Cheese",
-      "image": "assets/cheese.jpg",
+      "image": "cheese.jpg",
       "nutrition": {
-        "sugar": 27.5,
-        "cal": 105
+        "sugar": 3.5,
+        "cal": 350
       },
       "dietary": {
         "vegetarian": true,
@@ -138,10 +138,10 @@
     {
       "id": 9,
       "name": "Beef Jerky",
-      "image": "assets/beefJerky.jpg",
+      "image": "beef.jpg",
       "nutrition": {
-        "sugar": 27.5,
-        "cal": 105
+        "sugar": 9,
+        "cal": 410
       },
       "dietary": {
         "vegetarian": false,
