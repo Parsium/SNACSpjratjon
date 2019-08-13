@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import "../Styles/SnackTile.css";
-import PBSandwich from "../assets/PBSandwich.jpeg";
 import classnames from "classnames";
 
 function SnackTile(props) {
   const [cPanelIsOpen, closePanel] = useState(false);
+
 
   return (
     <div className="snack-tile">
@@ -21,9 +21,9 @@ function SnackTile(props) {
               <div className="c-tile__content">
                 <div className="c-tile__media">
                   <img
-                    alt="Peanut Butter Sandwich"
+                    alt={props.image}
                     className="c-tile__poster"
-                    src={PBSandwich}
+                    src={require("../assets/"+props.image)}
                   />
                 </div>
                 <div className="c-tile__body c-tile__caption">
