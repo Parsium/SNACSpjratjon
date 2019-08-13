@@ -39,7 +39,7 @@ function App(props) {
     if (prioritiseSweetness()) {
       sortSnacksBySweetness(newResults);
     } else {
-      sortSnacksByFatness(newResults);
+      sortSnacksByThinness(newResults);
     }
   };
 
@@ -61,11 +61,11 @@ function App(props) {
     setResults(newResults);
   };
 
-  const sortSnacksByFatness = newResults => {
+  const sortSnacksByThinness = newResults => {
     newResults.sort((a, b) => {
       return a.nutrition.cal - b.nutrition.cal;
     });
-    if (sliders[1] > 5) {
+    if (sliders[1] < 5) {
       newResults.reverse();
     }
     setResults(newResults);
@@ -79,7 +79,7 @@ function App(props) {
     if (id === 0) {
       sortSnacksBySweetness(newResults);
     } else if (id === 1) {
-      sortSnacksByFatness(newResults);
+      sortSnacksByThinness(newResults);
     }
   };
 

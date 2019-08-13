@@ -1,5 +1,5 @@
 import React from "react";
-import "./form.css";
+import "../Styles/form.css";
 
 export const Slider = props => {
   // const [value, setValue] = useState(5);
