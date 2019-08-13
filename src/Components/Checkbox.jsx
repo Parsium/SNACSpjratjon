@@ -6,6 +6,7 @@ export const Checkbox = props => {
       <label htmlFor={"checkbox" + props.id}>{props.display} </label>
       <br />
       <input
+      data-testid={props.id}
         type="checkbox"
         name={props.id}
         id={"checkbox" + props.id}
