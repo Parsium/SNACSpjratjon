@@ -4,6 +4,7 @@ import "../Styles/Header.css";
 export const Header = () => {
   return (
     <div
+      data-testid="header"
       className="c-hero"
       style={{
         "backgroundImage":
