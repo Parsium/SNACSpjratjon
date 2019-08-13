@@ -16,7 +16,7 @@ function SnackTile(props) {
               "is-selected": cPanelIsOpen
             })}
           >
-            <a className="c-tile__link c-shine-context" href="#">
+            <div className="c-tile__link c-shine-context" href="#">
               <div className="c-tile__content">
                 <div className="c-tile__media">
                   <img
@@ -31,10 +31,7 @@ function SnackTile(props) {
                   </h2>
                   <button
                     className="c-btn c-btn--primary"
-                    onClick={(ev) => {
-                      ev.preventDefault();
-                        closePanel(!cPanelIsOpen)
-                      }}
+                    onClick={() => closePanel(!cPanelIsOpen)}
                   >
                     <img
                       className="c-btn__icon"
@@ -51,7 +48,7 @@ function SnackTile(props) {
               <div className="c-tile__shine c-tile__shine--bottom c-shine c-shine--rev">
                 <div className="c-shine__rail" />
               </div>
-            </a>
+            </div>
           </article>
         </div>
       </div>

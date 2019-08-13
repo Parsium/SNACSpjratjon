@@ -1,12 +1,6 @@
-.snack-list {
-    width: 100%;
-}
-
 #snackList-header {
-    line-height: 1.8em;
-    margin-left: 7.5em;
-    margin-top: 1em;
+  text-align: center;
 }
 .o-layout__item {
-    width: 100%;
+  width: 100%;
 }
