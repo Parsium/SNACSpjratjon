@@ -14,12 +14,12 @@ export const Header = () => {
       <div class="c-hero__caption">
         <div class="o-container">
           <a class="c-hero__link" href="#1">
-            <p id="HeaderTitle" class="c-heading-alpha u-margin-bottom-none">
+            <h1 id="HeaderTitle" class="c-heading-alpha u-margin-bottom-none">
               SNACSpjratjon
-            </p>
-            <p id="HeaderSubtitle" class="c-heading-delta u-margin-bottom">
+            </h1>
+            <h2 id="HeaderSubtitle" class="c-heading-delta u-margin-bottom">
               Help Me Choose a Snack
-            </p>
+            </h2>
           </a>
         </div>
       </div>

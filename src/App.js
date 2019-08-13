@@ -93,17 +93,23 @@ function App(props) {
 
   return (
     <div>
-      <Header />
-      <Control
-        vegetarian={checkboxes[0]}
-        vegan={checkboxes[1]}
-        glutenFree={checkboxes[2]}
-        nutFree={checkboxes[3]}
-        onChange={handleChange}
-      />
-      <FeelingLucky onClick={() => randomiseSnack()} />
-      <SnackList key={results[0].name} snacks={results} />
-      <Footer />
+      <header>
+        <Header />
+      </header>
+      <main>
+        <Control
+          vegetarian={checkboxes[0]}
+          vegan={checkboxes[1]}
+          glutenFree={checkboxes[2]}
+          nutFree={checkboxes[3]}
+          onChange={handleChange}
+        />
+        <FeelingLucky onClick={() => randomiseSnack()} />
+        <SnackList key={results[0].name} snacks={results} />
+      </main>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }
