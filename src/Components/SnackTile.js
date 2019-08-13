@@ -30,7 +30,7 @@ function SnackTile(props) {
                     {props.snackName}
                   </h2>
                   <button
-                    className="c-btn c-btn--primary"
+                    className="showmore c-btn c-btn--primary"
                     onClick={() => closePanel(!cPanelIsOpen)}
                   >
                     <img
