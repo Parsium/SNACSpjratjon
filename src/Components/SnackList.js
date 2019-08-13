@@ -34,6 +34,7 @@ class SnackList extends Component {
             <SnackTile
               key={snack.id}
               snackName={snack.name}
+              image={snack.image}
               snackDescription={snack.description}
               calories={snack.nutrition.cal}
               sugar={snack.nutrition.sugar}
