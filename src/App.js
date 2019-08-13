@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import SnackList from "./Components/SnackList";
+import {SnackList} from "./Components/SnackList";
 import { Header } from "./Components/Header";
 import Footer from "./Components/Footer";
 import Control from "./Components/Control";
@@ -52,7 +52,7 @@ function App(props) {
         onChange={(e, id) => handleCheck(e, id)}
       />
       <FeelingLucky onClick={() => randomiseSnack()} />
-      <SnackList snacks={results} />
+      <SnackList key={results[0].name} snacks={results} />
       <Footer />
     </div>
   );

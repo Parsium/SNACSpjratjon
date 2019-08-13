@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "../Styles/SnackTile.css";
-import "../snacks.json";
 import classnames from "classnames";
 
 function SnackTile(props) {
@@ -21,9 +20,9 @@ function SnackTile(props) {
               <div className="c-tile__content">
                 <div className="c-tile__media">
                   <img
-                    alt=" "
+                    alt={props.image}
                     className="c-tile__poster"
-                    src={props.image}
+                    src={require("../assets/"+props.image)}
                   />
                 </div>
                 <div className="c-tile__body c-tile__caption">
