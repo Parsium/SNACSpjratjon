@@ -1,4 +1,8 @@
 import React, { useState } from "react";
+<<<<<<< HEAD
+import {SnackList} from "./Components/SnackList";
+=======
+>>>>>>> origin/master
 import { Header } from "./Components/Header";
 import { SnackList } from "./Components/SnackList";
 import Footer from "./Components/Footer";
