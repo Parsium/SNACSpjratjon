@@ -5,7 +5,6 @@ import classnames from "classnames";
 function SnackTile(props) {
   const [cPanelIsOpen, closePanel] = useState(false);
 
-
   return (
     <div className="snack-tile">
       <div className="o-layout o-layout--center">
@@ -21,15 +20,15 @@ function SnackTile(props) {
               <div className="c-tile__content">
                 <div className="c-tile__media">
                   <img
-                    alt={props.image}
+                    alt=""
                     className="c-tile__poster"
-                    src={require("../assets/"+props.image)}
+                    src={require("../assets/" + props.image)}
                   />
                 </div>
                 <div className="c-tile__body c-tile__caption">
-                  <p className="c-tile__title c-heading-delta">
+                  <h2 className="c-tile__title c-heading-delta">
                     {props.snackName}
-                  </p>
+                  </h2>
                   <button
                     className="c-btn c-btn--primary"
                     onClick={() => closePanel(!cPanelIsOpen)}
@@ -37,7 +36,7 @@ function SnackTile(props) {
                     <img
                       className="c-btn__icon"
                       src="https://www.sky.com/assets/toolkit/docs/buttons/example.svg"
-                      alt="Example Icon"
+                      alt=""
                     />
                     {cPanelIsOpen ? "Show Less" : "Show More"}
                   </button>

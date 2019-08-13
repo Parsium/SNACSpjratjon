@@ -8,11 +8,12 @@ export const Slider = props => {
   //   setValue(event.target.value);
   // };
   return (
-    <div className="slidecontainer " id="sliderContainer">
-      <label htmlFor="slider" className="leftLabel">
+    <div className="slidecontainer " id={`sliderContainer${props.id}`}>
+      <p id={"leftLabel" + props.id} className="leftLabel">
         {props.leftLabel}
-      </label>
+      </p>
       <input
+        aria-labelledby={`leftLabel${props.id} rightLabel${props.id}`}
         className="slider"
         type="range"
         min="0"
@@ -23,9 +24,9 @@ export const Slider = props => {
           props.onChange(e, props.id);
         }}
       />
-      <label className="rightLabel" htmlFor="slider">
+      <p id={"rightLabel" + props.id} className="rightLabel">
         {props.rightLabel}
-      </label>
+      </p>
     </div>
   );
 };
