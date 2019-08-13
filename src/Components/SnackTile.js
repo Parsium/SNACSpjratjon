@@ -32,7 +32,10 @@ function SnackTile(props) {
                   </p>
                   <button
                     className="c-btn c-btn--primary"
-                    onClick={() => closePanel(!cPanelIsOpen)}
+                    onClick={(ev) => {
+                      ev.preventDefault();
+                        closePanel(!cPanelIsOpen)
+                      }}
                   >
                     <img
                       className="c-btn__icon"

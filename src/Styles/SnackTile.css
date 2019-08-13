@@ -28,3 +28,7 @@
     width: 17em;
     height: 10em;
 }
+
+.c-btn--primary {
+    margin: 1em;
+}
