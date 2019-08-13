@@ -1,6 +1,7 @@
 .slidecontainer {
   width: 100%;
   vertical-align: middle;
+  margin: 1em;
 }
 .slider {
   -webkit-appearance: none;
