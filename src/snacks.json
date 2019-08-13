@@ -32,7 +32,7 @@
     },
     {
       "id": 2,
-      "name": "Special K Biscuit Moments",
+      "name": "Biscuit Moments",
       "image": "specialK.jpg",
       "nutrition": {
         "sugar": 27,
@@ -77,7 +77,7 @@
     },
     {
       "id": 5,
-      "name": "Peanut Butter Sandwich",
+      "name": "PB Sandwich",
       "image": "PBSandwich.jpeg",
       "nutrition": {
         "sugar": 6.9,
