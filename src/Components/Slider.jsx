@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./form.css";
 
 export const Slider = props => {
@@ -15,7 +15,7 @@ export const Slider = props => {
       <input
         className="slider"
         type="range"
-        min="1"
+        min="0"
         max="10"
         value={props.value}
         id={props.id}

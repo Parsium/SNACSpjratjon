@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import SnackList from "./Components/SnackList";
+import React, { useState, useEffect } from "react";
+import { SnackList } from "./Components/SnackList";
 import Footer from "./Components/Footer";
 import Control from "./Components/Control";
 
@@ -15,60 +15,70 @@ function App(props) {
     filterSnacks();
   };
 
-
-  // Returns set of snacks based on controls
-  const filterSnacks = (event) => {
-
-    let snacks = props.data.snacks;
-    let results = snacks;
+  const filterSnacks = event => {
+    var newResults = props.data.snacks;
     const dietary = Object.keys(results[0].dietary);
-
-    // for (let i = 0; i < checkboxes.length; i++) {
-    //   if (checkboxes[i]) {
-    //     results = results.filter(
-    //       item => item.dietary[dietary[i]] === checkboxes[i]
-    //     );
-    //   }
-    // }
     checkboxes.map((checkboxValue, index) => {
-      if(checkboxValue) {
-        results = results.filter(
+      if (checkboxValue) {
+        newResults = newResults.filter(
           item => item.dietary[dietary[index]] === checkboxes[index]
         );
       }
-    })
-
-    setResults(results);
-  
+    });
+    if (prioritiseSweetness()) {
+      sortSnacksBySweetness(newResults);
+    } else {
+      sortSnacksByFatness(newResults);
+    }
   };
 
-  const sortSnacksBySweetness = () => {
-
-    results.sort((a, b) => {
-      return a.nutrition.sugar - b.nutrition.sugar;
-     });
-    if (sliders[0] < 5) {
-      results.reverse();
-      console.log("High sugar", results[0].nutrition.sugar)
+  const prioritiseSweetness = () => {
+    let sweetnessDifference = Math.abs(5 - sliders[0]);
+    let fatnessDifference = Math.abs(5 - sliders[1]);
+    if (sweetnessDifference >= fatnessDifference) {
+      return true;
     }
-    setResults(results);
-  }
+  };
+
+  const sortSnacksBySweetness = newResults => {
+    newResults.sort((a, b) => {
+      return a.nutrition.sugar - b.nutrition.sugar;
+    });
+    if (sliders[0] < 5) {
+      newResults.reverse();
+    }
+    setResults(newResults);
+  };
+
+  const sortSnacksByFatness = newResults => {
+    newResults.sort((a, b) => {
+      return a.nutrition.cal - b.nutrition.cal;
+    });
+    if (sliders[1] > 5) {
+      newResults.reverse();
+    }
+    setResults(newResults);
+  };
 
   const handleSlide = (event, id) => {
     let newSliders = sliders;
     newSliders[id] = parseInt(event.target.value);
     setSliders(newSliders);
-    console.log("Slider vals", sliders);
-    sortSnacksBySweetness();
+    let newResults = results.slice(0);
+    if (id === 0) {
+      sortSnacksBySweetness(newResults);
+    } else if (id === 1) {
+      sortSnacksByFatness(newResults);
+    }
   };
 
-  const handleChange = (type) => (e, id) => {
-    if (type === 'slider') {
-      handleSlide(e, id)
+  const handleChange = type => (e, id) => {
+    if (type === "slider") {
+      handleSlide(e, id);
     } else {
-      handleCheck(e, id)
+      handleCheck(e, id);
     }
-  }
+  };
 
   return (
     <div>
@@ -79,7 +89,7 @@ function App(props) {
         nutFree={checkboxes[3]}
         onChange={handleChange}
       />
-      <SnackList snacks={results} />
+      <SnackList key={results[0].name} snacks={results} />
       <Footer />
     </div>
   );
