@@ -1,39 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1565788431247" clover="3.2.0">
-  <project timestamp="1565788431247" name="All files">
-    <metrics statements="15" coveredstatements="14" conditionals="2" coveredconditionals="2" methods="11" coveredmethods="10" elements="28" coveredelements="26" complexity="0" loc="15" ncloc="15" packages="1" files="6" classes="6"/>
-    <file name="Checkbox.jsx" path="/private/var/gradacad/Documents/GitHub/SNACSpjratjon/src/Components/Checkbox.jsx">
-      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-      <line num="3" count="3" type="stmt"/>
-      <line num="4" count="18" type="stmt"/>
-      <line num="15" count="1" type="stmt"/>
-    </file>
-    <file name="Control.jsx" path="/private/var/gradacad/Documents/GitHub/SNACSpjratjon/src/Components/Control.jsx">
-      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <line num="7" count="4" type="stmt"/>
-    </file>
-    <file name="FeelingLucky.jsx" path="/private/var/gradacad/Documents/GitHub/SNACSpjratjon/src/Components/FeelingLucky.jsx">
-      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-      <line num="6" count="3" type="stmt"/>
-      <line num="10" count="1" type="stmt"/>
-    </file>
-    <file name="Slider.jsx" path="/private/var/gradacad/Documents/GitHub/SNACSpjratjon/src/Components/Slider.jsx">
-      <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
-      <line num="4" count="3" type="stmt"/>
-      <line num="5" count="12" type="stmt"/>
-      <line num="22" count="0" type="stmt"/>
-    </file>
-    <file name="SnackList.js" path="/private/var/gradacad/Documents/GitHub/SNACSpjratjon/src/Components/SnackList.js">
-      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-      <line num="5" count="2" type="stmt"/>
-      <line num="6" count="4" type="stmt"/>
-      <line num="13" count="40" type="stmt"/>
-    </file>
-    <file name="SnackTile.js" path="/private/var/gradacad/Documents/GitHub/SNACSpjratjon/src/Components/SnackTile.js">
-      <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
-      <line num="6" count="42" type="stmt"/>
-      <line num="7" count="42" type="stmt"/>
-      <line num="35" count="1" type="stmt"/>
-    </file>
+<coverage generated="1565788669943" clover="3.2.0">
+  <project timestamp="1565788669943" name="All files">
+    <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0" elements="0" coveredelements="0" complexity="0" loc="0" ncloc="0" packages="0" files="0" classes="0"/>
   </project>
 </coverage>
