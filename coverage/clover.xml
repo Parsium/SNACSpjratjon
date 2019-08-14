@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1565712657361" clover="3.2.0">
-  <project timestamp="1565712657361" name="All files">
-    <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2" elements="5" coveredelements="5" complexity="0" loc="3" ncloc="3" packages="1" files="2" classes="2"/>
-    <file name="Footer.js" path="/private/var/gradacad/Documents/GitHub/SNACSpjratjon/src/Components/Footer.js">
-      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <line num="5" count="1" type="stmt"/>
-    </file>
-    <file name="Header.jsx" path="/private/var/gradacad/Documents/GitHub/SNACSpjratjon/src/Components/Header.jsx">
-      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <line num="4" count="2" type="stmt"/>
-      <line num="5" count="2" type="stmt"/>
+<coverage generated="1565773621627" clover="3.2.0">
+  <project timestamp="1565773621627" name="All files">
+    <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2" elements="7" coveredelements="7" complexity="0" loc="3" ncloc="3" packages="1" files="1" classes="1"/>
+    <file name="SnackTile.js" path="/private/var/gradacad/Documents/GitHub/SNACSpjratjon/src/Components/SnackTile.js">
+      <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+      <line num="6" count="13" type="stmt"/>
+      <line num="7" count="13" type="stmt"/>
+      <line num="35" count="1" type="stmt"/>
     </file>
   </project>
 </coverage>

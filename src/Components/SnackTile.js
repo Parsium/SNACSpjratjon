@@ -4,9 +4,9 @@ import classnames from "classnames";
 
 function SnackTile(props) {
   const [cPanelIsOpen, closePanel] = useState(false);
-
   return (
-    <div className="snack-tile">
+    <div className="snack-tile"
+          data-testid={props.name}>
       <div className="o-layout o-layout--center">
         <div className="o-layout__item u-width-1/2@large">
           <article
@@ -30,6 +30,7 @@ function SnackTile(props) {
                     {props.snackName}
                   </h2>
                   <button
+                    data-testid={props.name + "-button"}
                     className="showmore c-btn c-btn--primary"
                     onClick={() => closePanel(!cPanelIsOpen)}
                   >
@@ -53,6 +54,7 @@ function SnackTile(props) {
         </div>
       </div>
       <article
+        data-testid="contentArticle"
         className={classnames({ "c-panel": true, "is-open": cPanelIsOpen })}
       >
         <div className="c-panel__content">

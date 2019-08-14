@@ -1,7 +1,6 @@
 import React from "react";
 import { Header } from "./Header";
 import { render } from "@testing-library/react";
-import { isTSAnyKeyword, exportAllDeclaration } from "@babel/types";
 
 const renderer = () => render(<Header />);
 
