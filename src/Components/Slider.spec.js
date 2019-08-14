@@ -15,9 +15,17 @@ const defaultProps = {
 const renderer = (props = defaultProps) => render(<Slider {...props} />);
 
 describe("Slider", () => {
+  beforeEach(() => {
+    jest.resetAllMocks();
+  });
   it("renders the slider-wrapper component", () => {
     const component = renderer();
     expect(component.queryByTestId("slider-wrapper")).not.toBeNull();
+  });
+
+  it("renders the slider-input component", () => {
+    const component = renderer();
+    expect(component.queryByTestId("slider-input")).not.toBeNull();
   });
 
   it("renders the correct left label from props", () => {
@@ -39,9 +47,22 @@ describe("Slider", () => {
     expect(component.queryByTestId("slider-input").value).toEqual("5");
   });
 
-  it("displayes the correct value when slid", () => {
+  it("calls the onChange prop when changed", () => {
     const component = renderer();
+    const testSlider = component.queryByTestId("slider-input");
+    fireEvent.change(testSlider, { target: { value: "10" } });
+    expect(mockedOnChange).toHaveBeenCalled();
+  });
 
-    expect(component.queryByTestId("slider-input").value).toEqual("5");
+  it("does not call the onChange prop when not changed", () => {
+    const component = renderer();
+    expect(mockedOnChange).not.toHaveBeenCalled();
+  });
+
+  it("displays the correct value when slid", () => {
+    const component = renderer();
+    const testSlider = component.queryByTestId("slider-input");
+    fireEvent.change(testSlider, { target: { value: "10" } });
+    expect(component.queryByTestId("slider-input").value).toEqual("10");
   });
 });
