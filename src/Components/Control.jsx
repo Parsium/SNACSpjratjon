@@ -5,7 +5,9 @@ import "../Styles/Control.css";
 
 function Control({ onChange, vegetarian, vegan, glutenFree, nutFree }) {
   return (
-    <div className="o-container">
+    <div 
+      data-testid="controls"
+      className="o-container">
       <form>
         <div className="o-container">
           <Slider

@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for Checkbox.jsx</title>
+    <title>Code coverage report for SnackList.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="prettify.css" />
     <link rel="stylesheet" href="base.css" />
@@ -16,7 +16,7 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="index.html">All files</a> Checkbox.jsx
+      <a href="index.html">All files</a> SnackList.js
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
@@ -66,43 +66,58 @@
 <a name='L18'></a><a href='#L18'>18</a>
 <a name='L19'></a><a href='#L19'>19</a>
 <a name='L20'></a><a href='#L20'>20</a>
-<a name='L21'></a><a href='#L21'>21</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">18x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">40x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from "react";
+import SnackTile from "./SnackTile.js";
+import "../Styles/SnackList.css";
 &nbsp;
-export const Checkbox = props =&gt; {
+export const SnackList = props =&gt; {
   return (
-    &lt;div className="o-layout__item u-width-1/4 checkbox"&gt;
-      &lt;label htmlFor={"checkbox" + props.id}&gt;{props.display} &lt;/label&gt;
-      &lt;br /&gt;
-      &lt;input
-        data-testid={"checkbox-" + props.id}
-        type="checkbox"
-        name={props.name}
-        id={"checkbox" + props.id}
-        value={props.value}
-        onChange={e =&gt; {
-          props.onChange(e, props.id);
-        }}
-      /&gt;
+    &lt;div data-testid="snack-list" className="snack-list"&gt;
+      &lt;h1 id="snackList-header" data-testid="snack-list-header" className="c-heading-alpha"&gt;
+        Your recommended snacks!
+      &lt;/h1&gt;
+      &lt;div className="snack-list-container"&gt;
+        {props.snacks.map(snack =&gt; (
+          &lt;SnackTile
+            key={snack.id}
+            snackName={snack.name}
+            image={snack.image}
+            snackDescription={snack.description}
+            calories={snack.nutrition.cal}
+            sugar={snack.nutrition.sugar}
+          /&gt;
+        ))}
+      &lt;/div&gt;
     &lt;/div&gt;
   );
 };

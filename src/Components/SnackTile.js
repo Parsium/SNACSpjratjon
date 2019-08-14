@@ -6,7 +6,7 @@ function SnackTile(props) {
   const [cPanelIsOpen, closePanel] = useState(false);
   return (
     <div className="snack-tile"
-          data-testid={props.name}>
+      data-testid="snack-tile">
       <div className="o-layout o-layout--center">
         <div className="o-layout__item u-width-1/2@large">
           <article

@@ -4,8 +4,9 @@ import "../Styles/FeelingLucky.css";
 
 function FeelingLucky(props) {
   return (
-    <div className="buttonWrapper">
+    <div data-testid="feeling-lucky" className="buttonWrapper">
       <button
+        data-testid="feeling-lucky-button"
         onClick={event => props.onClick(event)}
         className="c-btn c-btn--primary"
       >

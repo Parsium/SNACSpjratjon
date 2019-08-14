@@ -4,8 +4,8 @@ import "../Styles/SnackList.css";
 
 export const SnackList = props => {
   return (
-    <div className="snack-list">
-      <h1 id="snackList-header" className="c-heading-alpha">
+    <div data-testid="snack-list" className="snack-list">
+      <h1 id="snackList-header" data-testid="snack-list-header" className="c-heading-alpha">
         Your recommended snacks!
       </h1>
       <div className="snack-list-container">

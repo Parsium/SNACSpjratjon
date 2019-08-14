@@ -16,12 +16,12 @@ const renderer = () => render(<Checkbox {...props} />);
 describe("Checkbox", () => {
     it ("Loads without crashing", () => {
         const component = renderer();
-        expect(component.queryByTestId("2")).not.toBeNull();
+        expect(component.queryByTestId("checkbox-2")).not.toBeNull();
     });
 
     it ("Can be checked and unchecked", () => {
         const component = renderer();
-        fireEvent.click(component.queryByTestId("2"));
+        fireEvent.click(component.queryByTestId("checkbox-2"));
         expect(mockOnClick).toHaveBeenCalled();
     });
 })
