@@ -6,7 +6,7 @@ function SnackTile(props) {
   const [cPanelIsOpen, closePanel] = useState(false);
 
   return (
-    <div className="snack-tile">
+    <div data-testid="snack-tile" className="snack-tile">
       <div className="o-layout o-layout--center">
         <div className="o-layout__item u-width-1/2@large">
           <article
@@ -19,21 +19,21 @@ function SnackTile(props) {
             <div className="c-tile__link c-shine-context" href="#">
               <div className="c-tile__content">
                 <div className="c-tile__media">
-                  <img
+                  <img data-testid="maltesers.jpg"
                     alt=""
                     className="c-tile__poster"
                     src={require("../assets/" + props.image)}
                   />
                 </div>
                 <div className="c-tile__body c-tile__caption">
-                  <h2 className="c-tile__title c-heading-delta">
+                  <h2 data-testid="snack-header" className="c-tile__title c-heading-delta">
                     {props.snackName}
                   </h2>
                   <button
                     className="showmore c-btn c-btn--primary"
                     onClick={() => closePanel(!cPanelIsOpen)}
                   >
-                    <img
+                    <img data-testid="snack-image"
                       className="c-btn__icon"
                       src="https://www.sky.com/assets/toolkit/docs/buttons/example.svg"
                       alt=""
@@ -55,7 +55,7 @@ function SnackTile(props) {
       <article
         className={classnames({ "c-panel": true, "is-open": cPanelIsOpen })}
       >
-        <div className="c-panel__content">
+        <div data-testid="info-box" className="c-panel__content">
           <div className="o-container">
             <p>{props.snackDescription}</p>
             <ul className="snack-data">

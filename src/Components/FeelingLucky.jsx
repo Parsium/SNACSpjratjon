@@ -4,7 +4,7 @@ import "../Styles/FeelingLucky.css";
 
 function FeelingLucky(props) {
   return (
-    <div class="buttonWrapper">
+    <div className="buttonWrapper">
       <button
         onClick={event => props.onClick(event)}
         className="c-btn c-btn--primary"

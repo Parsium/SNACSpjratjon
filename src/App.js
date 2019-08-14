@@ -105,7 +105,10 @@ function App(props) {
           onChange={handleChange}
         />
         <FeelingLucky onClick={() => randomiseSnack()} />
-        <SnackList key={results[0].name} snacks={results} />
+        <SnackList 
+        key={results[0].name} 
+        snacks={results}
+        data-testid={name} />
       </main>
       <footer>
         <Footer />
