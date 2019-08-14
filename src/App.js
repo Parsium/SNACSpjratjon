@@ -93,18 +93,22 @@ function App(props) {
 
   return (
     <div>
-      <header>
+      <header data-testid="app-header">
         <Header />
       </header>
-      <main>
+      <main data-testid="app-main">
         <Control
+          data-testid="app-control"
           vegetarian={checkboxes[0]}
           vegan={checkboxes[1]}
           glutenFree={checkboxes[2]}
           nutFree={checkboxes[3]}
           onChange={handleChange}
         />
-        <FeelingLucky onClick={() => randomiseSnack()} />
+        <FeelingLucky
+          dataTestId="app-feeling-lucky"
+          onClick={() => randomiseSnack()}
+        />
         <SnackList key={results[0].name} snacks={results} />
       </main>
       <footer>

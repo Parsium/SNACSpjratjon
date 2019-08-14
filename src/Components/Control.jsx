@@ -3,9 +3,16 @@ import { Slider } from "./Slider";
 import { Checkbox } from "./Checkbox";
 import "../Styles/Control.css";
 
-function Control({ onChange, vegetarian, vegan, glutenFree, nutFree }) {
+function Control({
+  onChange,
+  vegetarian,
+  vegan,
+  glutenFree,
+  nutFree,
+  ...props
+}) {
   return (
-    <div className="o-container">
+    <div {...props} className="o-container">
       <form>
         <div className="o-container">
           <Slider

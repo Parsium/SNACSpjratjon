@@ -8,23 +8,36 @@ export const Slider = props => {
   //   setValue(event.target.value);
   // };
   return (
-    <div className="slidecontainer " id={`sliderContainer${props.id}`}>
-      <p id={"leftLabel" + props.id} className="leftLabel">
+    <div
+      data-testid="slider-wrapper"
+      className="slidecontainer "
+      id={`sliderContainer${props.id}`}
+    >
+      <p
+        data-testid="slider-left-label"
+        id={"leftLabel" + props.id}
+        className="leftLabel"
+      >
         {props.leftLabel}
       </p>
       <input
+        data-testid="slider-input"
         aria-labelledby={`leftLabel${props.id} rightLabel${props.id}`}
         className="slider"
         type="range"
         min="0"
         max="10"
-        value={props.value}
+        value={undefined}
         id={props.id}
         onChange={e => {
           props.onChange(e, props.id);
         }}
       />
-      <p id={"rightLabel" + props.id} className="rightLabel">
+      <p
+        data-testid="slider-right-label"
+        id={"rightLabel" + props.id}
+        className="rightLabel"
+      >
         {props.rightLabel}
       </p>
     </div>
