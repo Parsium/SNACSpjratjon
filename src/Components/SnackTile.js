@@ -4,6 +4,7 @@ import classnames from "classnames";
 
 function SnackTile(props) {
   const [cPanelIsOpen, closePanel] = useState(false);
+
   return (
     <div className="snack-tile"
       data-testid="snack-tile">
@@ -26,7 +27,7 @@ function SnackTile(props) {
                   />
                 </div>
                 <div className="c-tile__body c-tile__caption">
-                  <h2 className="c-tile__title c-heading-delta">
+                  <h2 data-testid="snack-title" className="c-tile__title c-heading-delta">
                     {props.snackName}
                   </h2>
                   <button
@@ -63,6 +64,7 @@ function SnackTile(props) {
             <ul className="snack-data">
               <li>Calories: {props.calories} per 100g</li>
               <li>Sugar: {props.sugar}g per 100g</li>
+              <li>Vegetarian: {props.vegetarian}</li>
             </ul>
           </div>
         </div>

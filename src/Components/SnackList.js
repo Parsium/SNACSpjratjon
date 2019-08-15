@@ -17,6 +17,7 @@ export const SnackList = props => {
             snackDescription={snack.description}
             calories={snack.nutrition.cal}
             sugar={snack.nutrition.sugar}
+            vegetarian={snack.dietary.vegetarian.toString()}
           />
         ))}
       </div>
