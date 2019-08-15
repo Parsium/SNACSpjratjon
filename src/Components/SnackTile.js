@@ -58,8 +58,8 @@ function SnackTile(props) {
           <div className="o-container">
             <p>{props.snackDescription}</p>
             <ul className="snack-data">
-              <li>Calories: {props.calories} per 100g</li>
-              <li>Sugar: {props.sugar}g per 100g</li>
+              <li>Calories: {props.calories}g per serving</li>
+              <li>Sugar: {props.sugar}g per serving</li>
               <li>Vegetarian: {props.vegetarian}</li>
               <li>Nut-Free" {props.nutFree}</li>
             </ul>

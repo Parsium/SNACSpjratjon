@@ -8,28 +8,20 @@ h1 {
 }
 
 #feeling-lucky button{ 
-  background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
-  animation: rainbow;
-  animation-duration: 4s;
+  animation: rainbow 5s infinite;
 }
 
-@-webkit-keyframes rainbow {
-  0%{background-position:0% 82%}
-  50%{background-position:100% 19%}
-  100%{background-position:0% 82%}
-}
-@-moz-keyframes rainbow {
-  0%{background-position:0% 82%}
-  50%{background-position:100% 19%}
-  100%{background-position:0% 82%}
-}
-@-o-keyframes rainbow {
-  0%{background-position:0% 82%}
-  50%{background-position:100% 19%}
-  100%{background-position:0% 82%}
-}
-@keyframes rainbow { 
-  0%{background-position:0% 82%}
-  50%{background-position:100% 19%}
-  100%{background-position:0% 82%}
+/* #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3 */
+
+@keyframes rainbow {
+  0% { background-color: #ff2400 }
+  10% { background-color: #e81d1d }
+  20% { background-color: #e8b71d }
+  30% { background-color: #e3e81d }
+  40% { background-color: #1de840 }
+  50% { background-color: #1ddde8 }
+  60% { background-color: #2b1de8 }
+  70% { background-color: #dd00f3 }
+  80% { background-color: #dd00f3 }
+  90% { background-color: #e8b71d }
 }
