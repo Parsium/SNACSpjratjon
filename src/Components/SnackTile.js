@@ -35,12 +35,8 @@ function SnackTile(props) {
                     className="showmore c-btn c-btn--primary"
                     onClick={() => closePanel(!cPanelIsOpen)}
                   >
-                    <img
-                      className="c-btn__icon"
-                      src="https://www.sky.com/assets/toolkit/docs/buttons/example.svg"
-                      alt=""
-                    />
-                    {cPanelIsOpen ? "Show Less" : "Show More"}
+                    <i id="more-icon" className="fas fa-arrow-right" />
+                    {cPanelIsOpen ? " Show Less" : " Show More"}
                   </button>
                 </div>
               </div>
@@ -65,6 +61,7 @@ function SnackTile(props) {
               <li>Calories: {props.calories} per 100g</li>
               <li>Sugar: {props.sugar}g per 100g</li>
               <li>Vegetarian: {props.vegetarian}</li>
+              <li>Nut-Free" {props.nutFree}</li>
             </ul>
           </div>
         </div>

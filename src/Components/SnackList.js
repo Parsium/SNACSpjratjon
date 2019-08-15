@@ -6,7 +6,7 @@ export const SnackList = props => {
   return (
     <div data-testid="snack-list" className="snack-list">
       <h1 id="snackList-header" data-testid="snack-list-header" className="c-heading-alpha">
-        Your recommended snacks!
+        Your Recommended Snacks
       </h1>
       <div className="snack-list-container">
         {props.snacks.map(snack => (
@@ -18,6 +18,7 @@ export const SnackList = props => {
             calories={snack.nutrition.cal}
             sugar={snack.nutrition.sugar}
             vegetarian={snack.dietary.vegetarian.toString()}
+            nutFree={snack.dietary.nutFree.toString()}
           />
         ))}
       </div>

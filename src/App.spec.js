@@ -19,7 +19,7 @@ describe("App", () => {
     expect(snackList).not.toBeNull();
   });
 
-  it ("Filters foods correctly when checkboxes are selected", () => {
+  it ("Filters vegetarian foods correctly when the relevant checkbox is selected", () => {
     const component = renderer();
     fireEvent.click(component.queryByTestId("checkbox-0"));
     expect(component.queryByTestId("snack-list").textContent).not.toContain("Vegetarian: false");
@@ -29,5 +29,11 @@ describe("App", () => {
     const component = renderer();
     fireEvent.click(component.queryByTestId("feeling-lucky-button"));
     expect(component.queryAllByTestId("snack-tile").length).toBe(1);
+  });
+
+  it ("Filters nut-free foods correctly whe the relevant checbox is selected", () => {
+    const component = renderer();
+    fireEvent.click(component.queryByTestId("checkbox-3"));
+    expect(component.queryByTestId("snack-list").textContent).not.toContain("Nut-Free: false");
   });
 });

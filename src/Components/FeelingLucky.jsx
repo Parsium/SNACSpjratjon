@@ -4,13 +4,13 @@ import "../Styles/FeelingLucky.css";
 
 function FeelingLucky(props) {
   return (
-    <div data-testid="feeling-lucky" className="buttonWrapper">
+    <div data-testid="feeling-lucky" id="feeling-lucky" className="buttonWrapper">
       <button
         data-testid="feeling-lucky-button"
         onClick={event => props.onClick(event)}
         className="c-btn c-btn--primary"
       >
-        <img className="c-btn__icon" src={sandwichIcon} alt="" /> I'm feeling
+        <i className="fas fa-hamburger"></i> I'm feeling
         lucky (and hungry!)
       </button>
     </div>

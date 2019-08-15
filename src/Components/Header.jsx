@@ -1,5 +1,6 @@
 import React from "react";
 import "../Styles/Header.css";
+import RainbowText from 'react-rainbow-text';
 
 export const Header = () => {
   return (
@@ -18,9 +19,9 @@ export const Header = () => {
             <h1 id="HeaderTitle" className="c-heading-alpha u-margin-bottom-none">
               SNACSpjratjon
             </h1>
-            <h2 id="HeaderSubtitle" className="c-heading-delta u-margin-bottom">
+            <RainbowText id="HeaderSubtitle" className="c-heading-delta u-margin-bottom">
               Help Me Choose a Snack
-            </h2>
+            </RainbowText>
           </a>
         </div>
       </div>
