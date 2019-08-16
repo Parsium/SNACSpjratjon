@@ -1,3 +1,16 @@
 type Snack {
-    
+    id: ID! @id
+    createdAt: DateTime! @createdAt
+    name: String!
+    image: String!
+    nutrition: {
+        sugar: Float!
+        calories: Float!
+    }
+    dietary: {
+        vegetarian: Boolean!
+        vegan: Boolean!
+        glutenFree: Boolean!
+        nutFree: Boolean!
+    }
 }
