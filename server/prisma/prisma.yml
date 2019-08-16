@@ -1,5 +1,0 @@
-endpoint: ''
-datamodel: datamodel.prisma
-generate: 
-  - generator: javascript-client
-    output: ../src/generated/prisma-client
