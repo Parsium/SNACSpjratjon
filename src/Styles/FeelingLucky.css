@@ -1,3 +1,27 @@
 .buttonWrapper {
   text-align: center;
+  padding: 2rem;
+}
+
+h1 {
+  color: hotpink;
+}
+
+#feeling-lucky button{ 
+  animation: rainbow 5s infinite;
+}
+
+/* #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3 */
+
+@keyframes rainbow {
+  0% { background-color: #ff2400 }
+  10% { background-color: #e81d1d }
+  20% { background-color: #e8b71d }
+  30% { background-color: #e3e81d }
+  40% { background-color: #1de840 }
+  50% { background-color: #1ddde8 }
+  60% { background-color: #2b1de8 }
+  70% { background-color: #dd00f3 }
+  80% { background-color: #dd00f3 }
+  90% { background-color: #e8b71d }
 }

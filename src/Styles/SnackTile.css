@@ -23,6 +23,10 @@
   list-style: none;
 }
 
+div .c-tile__link {
+  background-color: #85bdde!;
+}
+
 @media only screen and (max-width: 1000px) {
   /* For desktop: */
   .snack-tile {

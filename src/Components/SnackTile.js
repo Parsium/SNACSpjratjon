@@ -6,7 +6,8 @@ function SnackTile(props) {
   const [cPanelIsOpen, closePanel] = useState(false);
 
   return (
-    <div className="snack-tile">
+    <div className="snack-tile"
+      data-testid="snack-tile">
       <div className="o-layout o-layout--center">
         <div className="o-layout__item u-width-1/2@large">
           <article
@@ -26,19 +27,16 @@ function SnackTile(props) {
                   />
                 </div>
                 <div className="c-tile__body c-tile__caption">
-                  <h2 className="c-tile__title c-heading-delta">
+                  <h2 data-testid="snack-title" className="c-tile__title c-heading-delta">
                     {props.snackName}
                   </h2>
                   <button
+                    data-testid={props.name + "-button"}
                     className="showmore c-btn c-btn--primary"
                     onClick={() => closePanel(!cPanelIsOpen)}
                   >
-                    <img
-                      className="c-btn__icon"
-                      src="https://www.sky.com/assets/toolkit/docs/buttons/example.svg"
-                      alt=""
-                    />
-                    {cPanelIsOpen ? "Show Less" : "Show More"}
+                    <i id="more-icon" className="fas fa-arrow-right" />
+                    {cPanelIsOpen ? " Show Less" : " Show More"}
                   </button>
                 </div>
               </div>
@@ -53,14 +51,17 @@ function SnackTile(props) {
         </div>
       </div>
       <article
+        data-testid="contentArticle"
         className={classnames({ "c-panel": true, "is-open": cPanelIsOpen })}
       >
         <div className="c-panel__content">
           <div className="o-container">
             <p>{props.snackDescription}</p>
             <ul className="snack-data">
-              <li>Calories: {props.calories} per 100g</li>
-              <li>Sugar: {props.sugar}g per 100g</li>
+              <li>Calories: {props.calories}g per serving</li>
+              <li>Sugar: {props.sugar}g per serving</li>
+              <li>Vegetarian: {props.vegetarian}</li>
+              <li>Nut-Free" {props.nutFree}</li>
             </ul>
           </div>
         </div>
