@@ -15,10 +15,10 @@ export const SnackList = props => {
             snackName={snack.name}
             image={snack.image}
             snackDescription={snack.description}
-            calories={snack.nutrition.cal}
-            sugar={snack.nutrition.sugar}
-            vegetarian={snack.dietary.vegetarian.toString()}
-            nutFree={snack.dietary.nutFree.toString()}
+            calories={snack.calories}
+            sugar={snack.sugar}
+            vegetarian={snack.vegetarian.toString()}
+            nutFree={snack.nutFree.toString()}
           />
         ))}
       </div>

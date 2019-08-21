@@ -20,7 +20,7 @@
       "name": "Digestive Biscuits",
       "image": "digestives.jpg",
       "nutrition": {
-        "sugar": 2.5,
+        "sugar": 2.5
         "cal": 298
       },
       "dietary": {

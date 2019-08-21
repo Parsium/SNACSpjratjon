@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
-import data from "./snacks.json";
 import * as serviceWorker from "./serviceWorker";
 import { InMemoryCache } from "apollo-boost";
 import { HttpLink } from "apollo-link-http";
@@ -21,26 +20,21 @@ const client = new ApolloClient({
 client.query({
     query: gql`
     query {
-        snack {
+        snacks {
           id
           name
           description
-          nutrition {
-            sugar
-            calories
-          }
-          dietary {
-            vegetarian
-            vegan
-            nutFree
-            glutenFree
-          }
+          image
+          calories
+          sugar
+          vegetarian
+          vegan
+          nutFree
+          glutenFree
         }
       }
     `
-  }).then(result => console.log(result));
-
-ReactDOM.render(<App data={data} />, document.getElementById("root"));
+  }).then(result => ReactDOM.render(<App data={result} />, document.getElementById("root")));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
