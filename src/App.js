@@ -29,18 +29,18 @@ function App(props) {
 
   // Based from selected controls, update state to display relevant snacks.
   const filterSnacks = event => {
-    var newResults = props.data.snacks;
+    var newResults = props.data.data.snacks;
     const dietary = [
-      Object.keys(results[0].vegetarian),
-      Object.keys(results[0].vegan),
-      Object.keys(results[0].nutFree),
-      Object.keys(results[0].glutenFree),
+      "vegetarian",
+      "vegan",
+      "nutFree",
+      "glutenFree"
     ]
     
     checkboxes.map((checkboxValue, index) => {
       if (checkboxValue) {
         newResults = newResults.filter(
-          item => item.dietary[dietary[index]] === checkboxes[index]
+          item => item[dietary[index]] === checkboxes[index]
         );
       }
     });
